@@ -168,7 +168,7 @@ tar -jxf $cache_dir/$FILE_NAME -C $cache_dir
 mv $cache_dir/$ARCHIVE_NAME $build_dir/vendor/phantomjs
 
 echo "-----> exporting PATH and LIBRARY_PATH"
-PROFILE_PATH="$BUILD_DIR/.profile.d/phantomjs.sh"
+PROFILE_PATH="$build_dir/.profile.d/phantomjs.sh"
 mkdir -p $(dirname $PROFILE_PATH)
 echo 'export PATH="$PATH:vendor/phantomjs/bin"' >> $PROFILE_PATH
 echo 'export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:vendor/phantomjs/lib"' >> $PROFILE_PATH
