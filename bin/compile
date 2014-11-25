@@ -161,10 +161,10 @@ if ! [ -e $cache_dir/$FILE_NAME ]; then
   curl $BUILDPACK_PHANTOMJS_PACKAGE -L -s -o $cache_dir/$FILE_NAME
 fi
 
-echo "-----> Extracting PhantomJS ${VERSION} binaries to ${BUILD_DIR}/vendor/phantomjs"
+echo "-----> Extracting PhantomJS ${PHANTOM_VERSION} binaries to ${BUILD_DIR}/vendor/phantomjs"
 mkdir -p $cache_dir/$ARCHIVE_NAME
 mkdir -p $build_dir/vendor
-tar -jxf $cache_dir/$FILE_NAME -C $CACHE_DIR
+tar -jxf $cache_dir/$FILE_NAME -C $cache_dir
 mv $cache_dir/$ARCHIVE_NAME $build_dir/vendor/phantomjs
 
 echo "-----> exporting PATH and LIBRARY_PATH"
